@@ -38,67 +38,65 @@ const ResultPage: React.FC = () => {
 
   // Graph data configuration
   const graphData = {
-    labels: studentData.sgpa.map((_, index) => `May ${index + 1}`), // Example labels
+    labels: studentData.sgpa.map((_, index) => `Semester ${index + 1}`),
     datasets: [
       {
-        label: "Data Trends",
+        label: "SGPA Trends",
         data: studentData.sgpa,
-        fill: true, // Enables the area fill
-        borderColor: "#4A90E2", // Line color (blue)
-        backgroundColor: "rgba(74, 144, 226, 0.4)", // Semi-transparent blue for fill
-        borderWidth: 2, // Thickness of the line
-        tension: 0.1, // Slightly smooth curve (less smooth than the previous example)
-        pointRadius: 3, // Smaller point dots
-        pointBackgroundColor: "#4A90E2", // Point color matches the line
+        fill: true,
+        borderColor: "#4A90E2",
+        backgroundColor: "rgba(74, 144, 226, 0.4)",
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 4,
+        pointBackgroundColor: "#4A90E2",
       },
     ],
   };
-  
+
   const graphOptions = {
     responsive: true,
     plugins: {
       legend: {
-        display: false, // Hide legend
+        display: false,
       },
       tooltip: {
-        enabled: true, // Keep tooltips
-        backgroundColor: "#ffffff", // White background for tooltips
-        titleColor: "#4A90E2", // Blue title text
-        bodyColor: "#000000", // Black body text
+        enabled: true,
+        backgroundColor: "#ffffff",
+        titleColor: "#4A90E2",
+        bodyColor: "#000000",
       },
     },
     scales: {
       x: {
         ticks: {
-          color: "#808080", 
+          color: "#808080",
           font: {
             size: 12,
             family: "Arial",
-            weight: "bold",
+            weight: 700,
           },
         },
         grid: {
-          display: false, 
+          display: false,
         },
       },
       y: {
         ticks: {
-          color: "#808080", 
+          color: "#808080",
           font: {
             size: 12,
             family: "Arial",
-            weight: "bold",
+            weight: 700,
           },
         },
         grid: {
-          color: "rgba(128, 128, 128, 0.2)", 
-          drawBorder: false, 
+          color: "rgba(128, 128, 128, 0.2)",
+          drawBorder: false,
         },
       },
     },
   };
-  
-  
 
   return (
     <div className="p-6 bg-gradient-to-r from-gray-900 via-gray-800 to-black min-h-screen text-white">
@@ -135,7 +133,11 @@ const ResultPage: React.FC = () => {
 
         {/* Graph */}
         <div className="bg-gray-800 p-4 rounded-lg shadow-lg flex-1">
-          <Line data={graphData} options={graphOptions} />
+          <h3 className="text-xl font-bold mb-4">Performance Graph</h3>
+          {/* Ensure the chart container has width and height */}
+          <div className="relative w-full h-80">
+            <Line data={graphData} options={graphOptions} />
+          </div>
         </div>
       </div>
 
@@ -153,10 +155,6 @@ const ResultPage: React.FC = () => {
           <h4 className="text-lg font-bold">Overall Rank</h4>
           <p className="text-2xl">{studentData.overallRank}</p>
         </div>
-      </div>
-      <div className="p-4 rounded-lg shadow-lg flex-1 text-center ">
-          <button className="bg-white p-4 rounded-lg shadow-lg flex-1 text-center text-black font-bold">Company Criteria Checker</button>
-          <p className="text-lg">coming soon...</p>
       </div>
     </div>
   );
