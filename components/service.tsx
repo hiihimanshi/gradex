@@ -38,14 +38,13 @@ const Services = () => {
         <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
           What we have for you
         </h2>
-
         {/* Horizontal Slider */}
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex space-x-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="w-72 h-80 flex-shrink-0 bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg rounded-xl p-6 text-white transform transition-transform duration-300 hover:scale-105"
+                className="w-72 h-70 flex-shrink-0 bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg rounded-xl p-6 text-white transform transition-transform duration-300 hover:scale-105"
                 style={{
                   animation: `fadeInUp 0.6s ease ${index * 0.2}s both`,
                 }}

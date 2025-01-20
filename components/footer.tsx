@@ -8,7 +8,12 @@ const Footer: React.FC = () => {
                         <h2 className="text-2xl font-bold mb-2">GradeX</h2>
                         <p className="text-gray-400">© 2025 GradeX All rights reserved.</p>
                     </div>
-                    <div className="w-full md:w-1/3 mb-6 md:mb-0">
+                <a href="https://www.linkedin.com/in/hiihimanshi/" target="_blank" rel="noopener noreferrer" 
+  className="fixed bottom-4 right-4 mt-8 px-5 py-2 mb-6 md:mb-0 bg-white text-slate-700 font-semibold rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-110 animate-fadeInUp delay-600 flex items-center space-x-2">
+  <span>Created by Himanshi</span>
+</a>
+
+                    {/* <div className="w-full md:w-1/3 mb-6 md:mb-0">
                         <h3 className="text-xl font-semibold mb-2">Links</h3>
                         <ul>
                             <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Home</a></li>
@@ -16,7 +21,7 @@ const Footer: React.FC = () => {
                             <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Services</a></li>
                             <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
                         </ul>
-                    </div>
+                    </div> */}
                     
                     {/* <div className="w-full md:w-1/3">
                         <h3 className="text-xl font-semibold mb-2">Follow Us</h3>

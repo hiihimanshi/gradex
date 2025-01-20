@@ -44,7 +44,7 @@ const HomePage = () => {
             placeholder="Enter your enrollment number..."
             className="w-full px-4 py-3 rounded-l-lg border-none outline-none focus:ring-2 focus:ring-blue-300 shadow-lg text-gray-800"
           />
-          <button className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-r-lg shadow-lg transition-transform transform hover:scale-105">
+          <button className="px-6 py-3 bg-yellow-600 hover:bg-yellow-500 text-white font-medium rounded-r-lg shadow-lg transition-transform transform hover:scale-105">
             Search
           </button>
         </div>
